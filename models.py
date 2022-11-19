@@ -47,7 +47,7 @@ class OrderResponds(Base):
     __tablename__ = 'order_responds'
 
     id = Column(Integer, primary_key=True)
-    id_order = Column(Integer, ForeignKey('users.id'))
+    id_order = Column(Integer, ForeignKey('orders.id'))
     id_sender = Column(Integer, ForeignKey('users.id'))
     cost = Column(Float)
     message = Column(VARCHAR)
